@@ -1,0 +1,13 @@
+{
+  "files.associations": {
+    "*.tcc": "cpp",
+    "unordered_map": "cpp",
+    "cmath": "cpp",
+    "random": "cpp",
+    "functional": "cpp",
+    "array": "cpp",
+    "tuple": "cpp",
+    "type_traits": "cpp",
+    "utility": "cpp"
+  }
+}

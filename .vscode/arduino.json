@@ -1,0 +1,5 @@
+{
+    "port": "COM3",
+    "board": "esp8266:esp8266:generic",
+    "sketch": "nodemcu\\main.ino"
+}
