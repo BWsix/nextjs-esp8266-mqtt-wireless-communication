@@ -2,11 +2,12 @@ import mqtt from "mqtt";
 import type { NextPage } from "next";
 
 const client = mqtt.connect("wss://test.mosquitto.org:8081");
+const topic = ""; // change this to whatever your want
 
 client.on("connect", () => {
   console.log("connected to mqtt broker.");
 
-  client.subscribe("mqttTesterProjectByVFLC", (err) => {
+  client.subscribe(topic, (err) => {
     if (err) {
       console.error(err);
       return;
@@ -14,12 +15,8 @@ client.on("connect", () => {
   });
 });
 
-client.on("message", (topic, payload) => {
-  console.log("[hello] ", topic, payload.toString());
-});
-
 const emit = (body: "0" | "1") => {
-  client.publish("mqttTesterProjectByVFLC", body);
+  client.publish(topic, body);
 };
 
 const Home: NextPage = () => {
